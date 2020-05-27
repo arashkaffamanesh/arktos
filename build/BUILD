@@ -54,6 +54,10 @@ DOCKERIZED_BINARIES = {
         "base": "@debian-iptables-{ARCH}//image",
         "target": "//cmd/kube-proxy:kube-proxy",
     },
+    "flat-network-controller": {
+        "base": "@debian-iptables-{ARCH}//image",
+        "target": "//cmd/flat-network-controller:flat-network-controller",
+    },
 }
 
 # In the bash-based build (build/lib/release.sh), the images built for amd64 do not use
@@ -156,6 +160,7 @@ release_filegroup(
         "//cmd/kube-apiserver",
         "//cmd/kube-controller-manager",
         "//cmd/kube-scheduler",
+        "//cmd/flat-network-controller",
     ]),
 )
 

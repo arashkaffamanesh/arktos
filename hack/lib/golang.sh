@@ -80,6 +80,7 @@ kube::golang::server_targets() {
     cmd/kube-scheduler
     vendor/k8s.io/apiextensions-apiserver
     cluster/gce/gci/mounter
+    cmd/flat-network-controller
   )
   echo "${targets[@]}"
 }
@@ -98,6 +99,7 @@ kube::golang::server_image_targets() {
     cmd/workload-controller-manager
     cmd/kube-scheduler
     cmd/kube-proxy
+    cmd/flat-network-controller
   )
   echo "${targets[@]}"
 }
